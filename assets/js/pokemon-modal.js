@@ -8,6 +8,8 @@ const toggleModal = (id) =>{
 
     if(id){
         loadPokemonModal(id)
+    }else{
+        modal.innerHTML = ""
     }
 
     

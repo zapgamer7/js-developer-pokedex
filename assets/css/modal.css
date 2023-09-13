@@ -1,0 +1,87 @@
+h1{
+    margin: 0;
+}
+
+#modalNumber{
+    color: #000;
+    opacity: .3;
+    text-align: right;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+#fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+#modalPokemon{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: fixed;
+    border-radius: 1rem;
+    padding: 1rem;
+    z-index: 2;
+    width: 500px;
+    max-width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#modalPokemon #modalHeader img {
+    max-width: 150px;
+    height: 150px;
+}
+
+#modalHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-right: 1px solid black;
+}
+
+#modalBody{
+    padding-left: 1rem;
+}
+
+#modalPokemon.hide,
+#fade.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modalPokemon.hide{
+    top: 100%;
+}
+
+#fade, #modalPokemon{
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+
+#modalPokemon #modalHeader #modalTypes {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#modalPokemon #modalHeader #modalTypes #modalType {
+    color: #fff;
+    width: 70px;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .8rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    margin-bottom: .5rem;
+    text-align: center;
+}
